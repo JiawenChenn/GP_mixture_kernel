@@ -157,8 +157,7 @@ for i in range(10):
         boston(split_ratio=j/10,file_name=i)
 
 # figure
-split_ratio=0.1
-file_name=1
+
 def mse_diff(split_ratio):
     diff = []
     for file_name in range(10):
