@@ -26,6 +26,11 @@ sys.path.append("../..")
 import mixture_kernel as mixture_kernel
 importlib.reload(mixture_kernel)
 
+if torch.cuda.is_available():
+    device = "cuda:0"
+else:
+    device = "cpu"
+
 # Load the image
 # https://en.wikipedia.org/wiki/Tread_plate#/media/File:Diamond_Plate.jpg
 
@@ -73,6 +78,8 @@ def boston(split_ratio=0.1,file_name=1):
             return gpytorch.distributions.MultivariateNormal(mean_x, covar_x)
 
     model = MixtureGPModel()
+    model.covar_module.mixed_weight=torch.nn.Parameter(torch.tensor((0.2,0.3,0.5),device=device))
+    
     model = model.cuda()
     model.train()
     # Use the SGD optimizer

@@ -24,11 +24,15 @@ from torch.distributions.multivariate_normal import MultivariateNormal
 sys.path.append("../..")
 import mixture_kernel
 #importlib.reload(mixture_kernel)
+if torch.cuda.is_available():
+    device = "cuda:0"
+else:
+    device = "cpu"
 
 # Load the image and pre-process
 # https://en.wikipedia.org/wiki/Tread_plate#/media/File:Diamond_Plate.jpg
 def data_processing(test_width=15):
-    img = Image.open('./diamong_plate.png')
+    img = Image.open('./diamond_plate.png')
     img = img.convert('L')  # convert to grayscale
     img = img.resize((100, 100)) # resize the image to 100 x 100
     # Crop the center test_width x test_width area
@@ -95,6 +99,8 @@ class MixtureGPModel(gpytorch.models.GP):
         return gpytorch.distributions.MultivariateNormal(mean_x, covar_x)
 
 model = MixtureGPModel()
+model.covar_module.mixed_weight=torch.nn.Parameter(torch.tensor((0.2,0.3,0.5),device=device))
+
 model = model.cuda()
 model.train()
 

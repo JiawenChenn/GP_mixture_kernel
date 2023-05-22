@@ -76,6 +76,7 @@ def add_simulation(n,p,L=3):
     model.train()
 
     # Parameter initialization
+    model.covar_module.mixed_weight=torch.nn.Parameter(torch.tensor((0.2,0.3,0.5),device=device))
     model.covar_module.matern1.base_kernel.raw_lengthscale = torch.nn.Parameter(torch.tensor(-1.2587,device=device).reshape(1,1))
     model.covar_module.matern2.base_kernel.raw_lengthscale = torch.nn.Parameter(torch.tensor(-0.4328,device=device).reshape(1,1))
     model.covar_module.matern3.base_kernel.raw_lengthscale = torch.nn.Parameter(torch.tensor(0.5413,device=device).reshape(1,1))
