@@ -26,20 +26,12 @@ This directory contains the code necessary for running the simulations in our st
 This directory contains the code, datasets, and output for the three applications of our study.
 
 - **ap1**
-  - `diamond_plate.png` - Image employed in application 1 downloaded from [Wikipedia](https://en.wikipedia.org/wiki/Tread_plate#/media/File:Diamond_Plate.jpg).
-  - `ap1_image_texture.py` - Python script for running application 1 and generating Figure 4
+  - `mnist_0.png` - Image downloaded from MNIST dataset.
+  - `mnist.py` - Python script for running application 1.
   
 - **ap2**
-  - `housing.csv` - Boston housing dataset used in application 2. This dataset is downloaded from [Kaggle](https://www.kaggle.com/datasets/vikrishnan/boston-house-prices).
-  - `Boston_result` - Parameter estimates from application 2
-  - `ap2_boston_housing.py` - Python script for replicating application 2 and generating Figure 5
+  - `co2_scipy.py` - Python script for replicating application 2.
 
-- **ap3**
-  - `result` - Parameter estimates and latent embeddings learned using GPLVM with mixture kernel and Matern 1/2 kernel
-  - `gplvm_matern0.5.py` - Python script for GPLVM with Matern 1/2 kernel
-  - `gplvm_mixture.py` - Python script for GPLVM with mixture kernel
-  - `figure.py` - Python script for generating Figure 6
-  - The GPLVM codes are adopted from [gpytorch examples](https://docs.gpytorch.ai/en/latest/examples/045_GPLVM/Gaussian_Process_Latent_Variable_Models_with_Stochastic_Variational_Inference.html).
 
 ### 3. Mixture_kernel.py
 This code defines the class for the mixture kernel used in simulations and applications. You need to import kernels from this file.
