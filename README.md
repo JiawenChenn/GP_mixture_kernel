@@ -25,11 +25,11 @@ This directory contains the code necessary for running the simulations in our st
 
 This directory contains the code, datasets, and output for the three applications of our study.
 
-- **ap1**
+- **application 1 (MNIST)**
   - `mnist_0.png` - Image downloaded from MNIST dataset.
   - `mnist.py` - Python script for running application 1.
   
-- **ap2**
+- **application 2 (Mauna Loa CO2)**
   - `co2_scipy.py` - Python script for replicating application 2.
 
 
