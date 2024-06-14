@@ -1,6 +1,6 @@
 # On the Identifiability and Interpretability of Gaussian Process Models
 
-This repository houses the complete codebase and estimated parameters for the research study titled “On the Identifiability and Interpretability of Gaussian Process Models ([NeurIPS 2023](https://proceedings.neurips.cc/paper_files/paper/2023/hash/dea2b4f9012686bcc1f59a62bcd28158-Abstract-Conference.html))”
+This repository houses the complete codebase and estimated parameters for **On the Identifiability and Interpretability of Gaussian Process Models** ([NeurIPS 2023](https://proceedings.neurips.cc/paper_files/paper/2023/hash/dea2b4f9012686bcc1f59a62bcd28158-Abstract-Conference.html))”
 
 ## Repository Structure
 
