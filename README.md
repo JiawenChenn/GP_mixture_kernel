@@ -54,3 +54,15 @@ Ensure your environment is set up with the following packages:
 - Edward = "^1.3.5"
 
 All codes have been executed on Tesla V100-SXM2 GPUs or CPUs.
+
+## Citation
+
+```
+@article{chen2024identifiability,
+  title={On the Identifiability and Interpretability of Gaussian Process Models},
+  author={Chen, Jiawen and Mu, Wancen and Li, Yun and Li, Didong},
+  journal={Advances in Neural Information Processing Systems},
+  volume={36},
+  year={2024}
+}
+```
